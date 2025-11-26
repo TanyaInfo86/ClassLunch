@@ -59,7 +59,7 @@ export default function StudentList({ students, dates, toggleAttendance }) {
                       }`}
                       onClick={() => toggleAttendance(student.id, d)}
                     >
-                      {attended ? "➕" : ""}
+                      {attended ? "➕" : "-"}
                     </td>
                   );
                 })}

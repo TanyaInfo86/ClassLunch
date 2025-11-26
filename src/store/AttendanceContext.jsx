@@ -1,7 +1,7 @@
 // src/store/AttendanceContext.js
 import React, { createContext, useContext, useState, useEffect } from "react";
 import studentsData from "../data/students.json";
-import { getWorkingDays } from "../hooks/useAttendance";
+import { getWorkingDays } from "../utils/getWorkingDays";
 
 const AttendanceContext = createContext(null);
 

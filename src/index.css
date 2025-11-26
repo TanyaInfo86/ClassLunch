@@ -1,29 +1,40 @@
-/* === ГЛОБАЛЬНІ СТИЛІ ДЛЯ ВСЬОГО САЙТУ === */
+/* === Підключення єдиного шрифту Roboto на весь сайт === */
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* === ГЛОБАЛЬНІ ЗМІННІ === */
 :root {
   --bg: #f8fafc;
   --text: #0f172a;
-  --primary: #2563eb; /* Синій — акцент */
+  --primary: #2563eb;
   --primary-hover: #1e40af;
   --border: #e5e7eb;
   --shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
 }
 
-* {
-  box-sizing: border-box;
-}
-
+/* === Головний шрифт сайту === */
 html,
 body,
 #root {
   height: 100%;
   margin: 0;
-  font-family: "Inter", "Manrope", Arial, sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.5;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
-/* === Головна структура додатку === */
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+/* === Основні стилі структури === */
+
 .app-root {
   max-width: 1100px;
   margin: 24px auto;
@@ -35,7 +46,6 @@ body,
   min-height: 90vh;
 }
 
-/* === Хедер === */
 .app-header {
   display: flex;
   justify-content: space-between;
@@ -48,11 +58,9 @@ body,
 .app-header h1 {
   margin: 0;
   font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--text);
+  font-weight: 500;
 }
 
-/* === Навігаційні кнопки === */
 .app-nav button {
   margin-left: 10px;
   padding: 6px 12px;
@@ -60,9 +68,8 @@ body,
   border: 1px solid var(--border);
   background: white;
   color: var(--text);
-  font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: 0.2s;
 }
 
 .app-nav button:hover {
@@ -71,38 +78,32 @@ body,
   border-color: var(--primary-hover);
 }
 
-/* === Основна частина === */
 .app-main {
   flex: 1;
   padding: 20px 24px;
 }
 
-/* === Футер === */
 .app-footer {
   padding: 12px 16px;
   border-top: 1px solid #f1f5f9;
   text-align: center;
-  color: #6b7280;
   font-size: 0.9rem;
-}
-
-/* === Додаткові глобальні елементи === */
-button {
-  font-family: inherit;
+  color: #6b7280;
 }
 
 table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
 }
 
 th,
 td {
-  text-align: center;
   padding: 8px;
+  text-align: center;
 }
 
 /* === Адаптивність === */
+
 @media (max-width: 768px) {
   .app-root {
     margin: 12px;
